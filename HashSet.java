@@ -30,4 +30,11 @@ public class HashSet
         }
         return encontrado;
     }
+
+    /**
+     * Vacía el conjunto.
+     */
+    public void clear(){
+        lista.clear();
+    }
 }
