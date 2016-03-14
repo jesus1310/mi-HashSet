@@ -64,4 +64,11 @@ public class HashSet
         }
         return eliminado;
     }
+    
+    /**
+     * Devuelve el numero de elementos del conjunto
+     */
+    public int size(){
+        return lista.size();
+    }
 }
