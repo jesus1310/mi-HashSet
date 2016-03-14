@@ -21,12 +21,12 @@ public class HashSet
      * Añade el elemento al conjunto si no estaba. Devuelve verdadero en caso de que el elemento no estuviera presente en el conjunto y falso en caso contrario.
      */
     public boolean add(int valor){
-        boolean encontrado = false;
+        boolean encontrado = true;
         if(!lista.contains(valor)) {
-            encontrado = true;
+            lista.add(valor);
         }
         else {
-            lista.add(valor);
+            encontrado = false;
         }
         return encontrado;
     }
@@ -36,5 +36,12 @@ public class HashSet
      */
     public void clear(){
         lista.clear();
+    }
+    
+    /**
+     * Devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
+     */
+    public boolean contains(int elemento){
+        return lista.contains(elemento);
     }
 }
