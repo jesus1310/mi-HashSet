@@ -64,11 +64,29 @@ public class HashSet
         }
         return eliminado;
     }
-    
+
     /**
      * Devuelve el numero de elementos del conjunto
      */
     public int size(){
         return lista.size();
+    }
+
+    /**
+     * 
+     */
+    public String toString(){
+        
+        String texto = "[";
+        for(int i = 0; i < lista.size(); i++) {
+            if(i == 0){
+                texto += lista.get(i);
+            }
+            else {
+                texto += ", " + lista.get(i);
+            }
+        }
+        texto += "]";
+        return texto;
     }
 }
