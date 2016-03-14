@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HashSet
+public class MiHashSet
 {
     // Creamos un ArrayList de enteros
     private ArrayListInt lista;
@@ -12,7 +12,7 @@ public class HashSet
     /**
      * Constructor for objects of class HashSet
      */
-    public HashSet()
+    public MiHashSet()
     {
         lista = new ArrayListInt();
     }
@@ -73,10 +73,9 @@ public class HashSet
     }
 
     /**
-     * 
+     * Devuelve una cadena conteniendo todos los elementos del conjunto separados por comas y entre corchetes.
      */
     public String toString(){
-        
         String texto = "[";
         for(int i = 0; i < lista.size(); i++) {
             if(i == 0){
@@ -88,5 +87,25 @@ public class HashSet
         }
         texto += "]";
         return texto;
+    }
+    
+    /**
+     * Devuelve verdadero si el parámetro es igual al conjunto sobre el que se invoca y falso en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto){
+        boolean esIgual = true;
+        if(otroConjunto.size() == lista.size()) {
+            for(int indice = 0;indice < lista.size() && esIgual;indice++)
+            {
+                if(!(otroConjunto.contains(lista.get(indice))))
+                {
+                    esIgual = false;
+                }
+            }
+        }
+        else {
+            esIgual = false;
+        }
+        return esIgual;
     }
 }
