@@ -6,11 +6,14 @@
  */
 public class HashSet
 {
+    // Creamos un ArrayList de enteros
+    private ArrayListInt lista;
+
     /**
      * Constructor for objects of class HashSet
      */
     public HashSet()
     {
-        
+        lista = new ArrayListInt();
     }
 }
