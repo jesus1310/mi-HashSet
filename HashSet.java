@@ -16,4 +16,18 @@ public class HashSet
     {
         lista = new ArrayListInt();
     }
+
+    /**
+     * Añade el elemento al conjunto si no estaba. Devuelve verdadero en caso de que el elemento no estuviera presente en el conjunto y falso en caso contrario.
+     */
+    public boolean add(int valor){
+        boolean encontrado = false;
+        if(!lista.contains(valor)) {
+            encontrado = true;
+        }
+        else {
+            lista.add(valor);
+        }
+        return encontrado;
+    }
 }
