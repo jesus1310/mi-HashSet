@@ -44,4 +44,11 @@ public class HashSet
     public boolean contains(int elemento){
         return lista.contains(elemento);
     }
+    
+    /**
+     * Devuelve verdadero si el conjunto no contiene elementos.
+     */
+    public boolean isEmpty(){
+        return lista.isEmpty();
+    }
 }
