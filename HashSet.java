@@ -37,18 +37,31 @@ public class HashSet
     public void clear(){
         lista.clear();
     }
-    
+
     /**
      * Devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
      */
     public boolean contains(int elemento){
         return lista.contains(elemento);
     }
-    
+
     /**
      * Devuelve verdadero si el conjunto no contiene elementos.
      */
     public boolean isEmpty(){
         return lista.isEmpty();
+    }
+
+    /**
+     * Elimina del conjunto el elemento dado. Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
+     */
+    public boolean remove(int elemento){
+        boolean eliminado = false;
+        if(lista.contains(elemento)) {
+            int index = lista.indexOf(elemento);
+            lista.remove(index);
+            eliminado = true;
+        }
+        return eliminado;
     }
 }
